@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\geometry{a4paper, margin=1in}
+
+\title{Traffic Sign Detection and Classification using YOLO and CNN}
+\author{JAYPAL }
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This project focuses on the detection and classification of traffic signs using a combination of YOLO (You Only Look Once) for object detection and a Convolutional Neural Network (CNN) for classification. The aim is to build an end-to-end automated system that can identify and classify traffic signs from images, providing a foundation for applications in self-driving vehicles and intelligent transportation systems.
+\end{abstract}
+
+\section{Introduction}
+The detection and classification of traffic signs is crucial for road safety and autonomous driving systems. In this project, we employed YOLOv8 for real-time detection of traffic signs and a CNN for accurate classification.
+
+\section{Libraries and Tools Used}
+\begin{itemize}
+    \item Python
+    \item Google Colab
+    \item PyTorch
+    \item Ultralytics YOLOv8
+    \item Flask (for web deployment)
+    \item LaTeX (for documentation)
+\end{itemize}
+
+\section{Dataset}
+We used the German Traffic Sign Recognition Benchmark (GTSRB) dataset which contains over 50,000 images of 43 traffic sign classes. The dataset was used for both object detection (YOLO) and classification (CNN).
+
+\begin{itemize}
+    \item \textbf{Dataset Link:} \url{https://benchmark.ini.rub.de/gtsrb_dataset.html}
+    \item Data was converted into YOLO format for detection and resized to $32 \times 32$ for CNN classification.
+\end{itemize}
+
+\section{Data Preprocessing}
+\begin{itemize}
+    \item All images were resized to $416 \times 416$ for YOLO and $32 \times 32$ for CNN.
+    \item YOLO labels were created in \texttt{.txt} files containing normalized bounding box coordinates and class labels.
+    \item CNN images were normalized and augmented using PyTorch's \texttt{transforms} module.
+\end{itemize}
+
+\section{YOLO Detection Model}
+\begin{itemize}
+    \item YOLOv8s model was trained on a smaller subset (500 images) to reduce training time.
+    \item Achieved mAP@0.5: \textbf{99.48\%}
+    \item Precision: \textbf{90.15\% to 100\%}, Recall: \textbf{84.46\% to 100\%}
+\end{itemize}
+
+
+\section{CNN Classification Model}
+\begin{itemize}
+    \item A simple 2-layer CNN was trained on the GTSRB classification dataset.
+    \item Achieved Test Accuracy: \textbf{XX\%} (Fill in your result)
+    \item Evaluation metrics included Accuracy and Confusion Matrix.
+\end{itemize}
+
+
+
+\section{Integration: YOLO + CNN}
+The system was designed to first detect traffic signs using YOLO, crop the detected region, and then classify the cropped sign using the CNN model. This two-stage pipeline ensures both high detection accuracy and fine-grained classification.
+
+
+
+\section{Flask Web Deployment}
+We deployed the complete solution using Flask, allowing users to:
+\begin{itemize}
+    \item Upload an image
+    \item Detect traffic signs (YOLO)
+    \item Classify signs (CNN)
+    \item View predictions on a simple web interface
+\end{itemize}
+
+
+
+\section{Key Learnings}
+\begin{itemize}
+    \item Understood object detection and classification fundamentals.
+    \item Learned YOLO training, evaluation, and inference.
+    \item Built and evaluated CNN models for multi-class classification.
+    \item Integrated two models into a seamless detection-classification pipeline.
+    \item Developed and deployed a web application using Flask.
+\end{itemize}
+
+\section{Conclusion}
+This project successfully demonstrated a real-time Traffic Sign Detection and Classification system using deep learning techniques. Future work could include deploying the system on embedded devices or improving classification accuracy with advanced models.
+
+\end{document}
+
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Traffic sign detection and classification}
+\author{jaypal arya}
+\date{July 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\end{document}
